@@ -5,6 +5,7 @@ Download the single file from /packages for your OS -
 
 If using source, run main.py,
   dependencies:
+    Flet
     BeautifulSoup
     requests
     googleapiclient.discovery
