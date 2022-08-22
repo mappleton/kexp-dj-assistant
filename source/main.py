@@ -11,7 +11,8 @@ import flet
 from flet import Page, Text, Row, icons, Divider, alignment, colors, ElevatedButton, TextField
 from os.path import exists
 
-file_exists = exists('api_config.py')
+file_name = '.api_config.py'
+file_exists = exists(file_name)
 
 if file_exists != True:
 # API Check and entry
@@ -25,7 +26,7 @@ if file_exists != True:
                     write_keys.skf = TextField(label="Enter your Songkick API Key:")
 
         def save_keys(e):
-            f = open('api_config.py', 'w')
+            f = open(file_name, 'w')
             f.write('youtube_api = ' + "'" + write_keys.ytf.value + "'" + '\n' +
                     'bitly_api = ' + "'" + write_keys.btf.value + "'" + '\n' +
                     'songkick_api = ' + "'" + write_keys.skf.value + "'" + '\n'
